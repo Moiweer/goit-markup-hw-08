@@ -59,12 +59,8 @@
     pointer-events: none;
     transition: opacity 250ms linear, visibility 250ms liener; 
 }
-.mobile-menu.is-open{
 
-opacity: 1;
-visibility: visible;
-pointer-events: auto;
-}
+
 .mobile-menu-btn {
     display: block;
     border: none;
@@ -77,6 +73,13 @@ pointer-events: auto;
    color: #000000;
     line-height: 0;
 }
+.mobile-menu.is-open {
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
  .mobile-menu-close-btn {
 position: absolute;
 top: 10px;
