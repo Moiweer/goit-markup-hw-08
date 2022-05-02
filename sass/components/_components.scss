@@ -25,3 +25,43 @@
     color: var(--accent-text-color);
 
 }
+
+
+@media  screen and (max-width:1199) {
+    .about-title,
+    .team-title,
+    .our-clients-title {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--main-text-color);
+        margin-bottom: 30px;
+    }
+    
+}
+@media screen  and (min-width:768px){
+    .about-title,
+    .team-title,
+    .our-clients-title{
+        display: flex;
+       justify-content: center;
+    }
+    
+    
+}
+@media screen  and (min-width:1200px) {
+    
+
+.about-title,
+.team-title,
+.our-clients-title {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+}
