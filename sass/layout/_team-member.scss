@@ -1,3 +1,11 @@
+h2.team-teatle {
+    font-size: 28px;
+    line-height: 1.18;
+
+    margin-bottom: 50px;
+}
+
+
 .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -16,9 +24,6 @@
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-teatle {
-    margin-bottom: 50px;
-}
 
 .team-member-name {
     font-weight: 500;

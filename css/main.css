@@ -293,13 +293,9 @@ img {
   color: var(--accent-hover-color);
 }
 
-.mobile-menu-social-media-link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 22px;
-  height: 1px;
-  color: var(--text-color);
+.mobile-menu-socia-media-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -647,6 +643,12 @@ img {
   }
   .description-list-item {
     width: 270px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .about {
+    display: none;
   }
 }
 
