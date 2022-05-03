@@ -858,6 +858,12 @@ img {
   background-color: var(--accent-hover-color);
 }
 
+.clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .client-icon-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -868,7 +874,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
   height: 92px;
   align-items: center;
   color: var(--social-icon-color);
@@ -883,18 +888,8 @@ img {
   border: 1px solid var(--accent-hover-color);
 }
 
-.clients-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-  padding: 0;
-}
-
 .client-icon-item {
+  width: calc((100% - 4 * 15px) / 2);
   -ms-flex-preferred-size: calc((100% - 60px) / 2);
       flex-basis: calc((100% - 60px) / 2);
   margin-bottom: 30px;
@@ -904,27 +899,52 @@ img {
   margin-right: 30px;
 }
 
+.client-icon-item:nth-child(2n + 2) {
+  margin-right: 0px;
+}
+
 .client-icon {
   fill: currentColor;
 }
 
-@media screen and (min-width: 768px) {
-  .client-icon-link {
-    width: 226px;
+@media screen and (max-width: 767px) {
+  .clients-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .client-icon-item {
-    -ms-flex-preferred-size: calc((100% - 90px) / 3);
-        flex-basis: calc((100% - 90px) / 3);
+    width: calc((100% - 30px) / 2);
+  }
+  .client-icon-item:nth-child(2n -1) {
+    margin-right: 30px;
+  }
+  .client-icon-item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .clients-list {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .client-icon-link {
-    width: 170px;
+  .client-icon-item {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+  .client-icon-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .client-icon-item:nth-child(-n+3) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-icon-item {
+    width: calc((100% - 5 * 30px) / 6);
+  }
+  .client-icon-item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
