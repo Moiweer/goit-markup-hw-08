@@ -5,13 +5,12 @@
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
     padding: 0 15px;
     margin: 0 auto;
 }
 
 .address {
+    text-align: center;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -28,11 +27,12 @@
 }
 
 .address-link {
-    display: inline-block;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .mail {
+    text-align: center;
     font-style: normal;
     font-size: 14px;
     line-height: 1.7;
@@ -64,6 +64,7 @@
 }
 
 .phone-number {
+    text-align: center;
     font-style: normal;
     font-size: 14px;
     line-height: 1.7;
@@ -82,6 +83,7 @@
 
 .address-list {
     display: block;
+    margin-bottom: 60px;
 }
 
 .address-list,
@@ -94,6 +96,7 @@ a.logo.link {
 }
 
 .logo-footer {
+    text-align: center;
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -110,10 +113,11 @@ a.logo.link {
 
 
 .footer-social {
-    margin-left: 70px;
+   margin-bottom: 60px;
 }
 
 .footer-social-title {
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -150,17 +154,17 @@ a.logo.link {
     fill: currentColor;
 }
 
-// FOOTER  CONTACT FORM 
-.footer-form-container {
-    display: flex;
-    margin-left: 93px;
-    width: 570px;
-    height: 78px;
-}
+// footer contact form
 
+.footer-form-mail-container{
+    display: flex;
+    max-width: 450px;
+    flex-direction: column;
+    align-items: center;
+}
 .footer-form-title {
+    text-align: center;
     display: block;
-    margin-left: 93px;
     margin-bottom: 20px;
     font-family: 'Roboto';
     font-style: normal;
@@ -169,6 +173,7 @@ a.logo.link {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white-text-color);
+    margin-bottom: 20px;
 }
 
 .footer-contact-form-input {
@@ -187,6 +192,7 @@ a.logo.link {
     background-color: transparent;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .footer-btn-submit {
@@ -209,6 +215,7 @@ a.logo.link {
     margin-left: auto;
     margin-right: auto;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover,
     &:focus {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -219,4 +226,64 @@ a.logo.link {
 .footer-btn-icon {
     margin-left: 10px;
     fill: currentColor;
+
+}
+
+
+// FOR TABLET -----------------
+@media screen and (min-width:768px) {
+    .footer-address-tablet{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-form-mail-container {
+        display: flex;
+        max-width: 767px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+// FOR DESCTOP
+@media screen and (min-width: 1200px) {
+    
+
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.address-link {
+    display: inline-block;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.footer-social {
+    margin-left: 70px;
+}
+
+.address-list {
+    display: block;
+}
+
+
+
+// FOOTER  CONTACT FORM 
+.footer-form-container {
+    display: flex;
+    margin-left: 93px;
+    width: 570px;
+    height: 78px;
+}
+.footer-form-title {
+    margin-left: 93px;
+}
 }

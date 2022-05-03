@@ -28,9 +28,9 @@
 
 
 @media  screen and (max-width:1199) {
-    .about-title,
-    .team-title,
-    .our-clients-title {
+    h2.about-title,
+    h2.team-title,
+    h2.our-clients-title { 
         display: block;
         align-items: center;
         justify-content: center;
@@ -45,9 +45,9 @@
     
 }
 @media screen  and (min-width:768px){
-    .about-title,
-    .team-title,
-    .our-clients-title{
+   h2.about-title,
+    h2.team-title,
+    h2.our-clients-title{
         display: flex;
        justify-content: center;
     }

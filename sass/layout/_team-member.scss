@@ -6,9 +6,13 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
+    margin-bottom: 30px;
+
 }
 .team-photo{
-    width: 450px;
+    min-width: 450px;
+    margin-right: 0;
+    margin-left: 0;
 }
 .team-list {
     display: flex;
@@ -50,12 +54,11 @@
 @media screen and(min-width:768px){
     .team-photo {
     
-        width: 354px;
+        min-width: 354px;
     }
     .team-member-photo {
         flex-basis: calc((100% - 60px) / 2);
         margin-left: 30px;
-        margin-bottom: 30px;
     }
 }
 @media screen and(min-width:1200px) {
