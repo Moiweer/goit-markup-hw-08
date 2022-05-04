@@ -26,16 +26,18 @@
     <header class="header">
       <div class="container header-container">
         <nav class="navigation">
-          <a href="./index.html" lang="en" class="logo logo-accent"
+          <a href="./index.html" lang="en" class="logo logo-accent link"
             >Web<span class="logo-black-color">Studio</span></a
           >
 
           <ul class="navigation-list list">
             <li class="navigation-list-item">
-              <a href="./index.html" class="navigation-link link">Студия</a>
+              <a href="./index.html" class="navigation-link link active"
+                >Студия</a
+              >
             </li>
             <li class="navigation-list-item">
-              <a href="./portfolio.html" class="navigation-link link active"
+              <a href="./portfolio.html" class="navigation-link link"
                 >Портфолио</a
               >
             </li>
@@ -44,6 +46,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-btn" data-menu-open>
+          <svg class="mobile-menu-btn-icon" width="40" height="40">
+            <use href="./images/sprite.svg#burger-menu-icon"></use>
+          </svg>
+        </button>
         <ul class="contacts-list list">
           <li class="contact-mail">
             <a href="mailto:info@devstudio.com" class="contact-mail-link link">
@@ -62,6 +69,56 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close-btn" data-menu-close>
+            <svg class="mobile-menu-close-icon" width="30" height="30">
+              <use href="./images/sprite.svg#close-icon"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-nav list link">
+            <li class="mobile-menu-item">
+              <a href="./index.html" class="mobile-menu-link">Студия</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="./portfolio.html" class="mobile-menu-link">Портфолио</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a href="/" class="mobile-menu-link">Контакты</a>
+            </li>
+          </ul>
+          <div class="menu-contacts-and-social">
+            <ul class="mobile-menu-contact">
+              <li class="mobile-menu-contact-item list">
+                <a href="tel:+380961111111" class="mobile-menu-contact-link-tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu-contact-item list">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu-contact-link-mail list"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu-social-media list">
+              <li class="mobile-menu-socia-media-item">
+                <a href="/" class="mobile-menu-social-media-link">Instagram</a>
+              </li>
+              <li class="mobile-menu-socia-media-item">
+                <a href="/" class="mobile-menu-social-media-link">Facebook</a>
+              </li>
+              <li class="mobile-menu-socia-media-item">
+                <a href="/" class="mobile-menu-social-media-link">Twitter</a>
+              </li>
+              <li class="mobile-menu-socia-media-item">
+                <a href="/" class="mobile-menu-social-media-link">Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -94,13 +151,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project1.jpg"
-                    width="370"
-                    height="404"
-                    alt="Пример постера"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project1.webp            1x,
+                        ./images/project1-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1.jpg           1x,
+                        ./images/project-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1-tablet.webp    1x,
+                        ./images/project1-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1-tablet.jpg    1x,
+                        ./images/project1-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1-mobile.webp    1x,
+                        ./images/project1-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project1-mobile.jpg    1x,
+                        ./images/project1-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project1.jpg"
+                      alt="Пример постера"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -116,13 +219,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project2.jpg"
-                    width="370"
-                    height="404"
-                    alt="Пример постера"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project2.webp            1x,
+                        ./images/project2-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2.jpg            1x,
+                        ./images/project2-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2-tablet.webp    1x,
+                        ./images/project2-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2-tablet.jpg    1x,
+                        ./images/project2-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2-mobile.webp    1x,
+                        ./images/project2-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project2-mobile.jpg    1x,
+                        ./images/project2-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project2.jpg"
+                      alt="Пример постера"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -140,13 +289,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project3.jpg"
-                    width="370"
-                    height="404"
-                    alt="Логотип приложения"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project3.webp            1x,
+                        ./images/project3-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3.jpg            1x,
+                        ./images/project3-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3-tablet.webp    1x,
+                        ./images/project3-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3-tablet.jpg    1x,
+                        ./images/project3-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3-mobile.webp    1x,
+                        ./images/project3-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project3-mobile.jpg    1x,
+                        ./images/project3-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project3.jpg"
+                      alt="Логотип приложения"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -164,13 +359,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project4.jpg"
-                    width="370"
-                    height="404"
-                    alt="Наушники"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project4.webp            1x,
+                        ./images/project4-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4.jpg            1x,
+                        ./images/project4-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4-tablet.webp    1x,
+                        ./images/project4-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4-tablet.jpg    1x,
+                        ./images/project4-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4-mobile.webp    1x,
+                        ./images/project4-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project4-mobile.jpg    1x,
+                        ./images/project4-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project1.jpg"
+                      alt="Наушники"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -188,13 +429,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project5.jpg"
-                    width="370"
-                    height="404"
-                    alt="Две коробки"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project5.webp            1x,
+                        ./images/project5-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5.jpg            1x,
+                        ./images/project5-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5-tablet.webp    1x,
+                        ./images/project5-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5-tablet.jpg    1x,
+                        ./images/project5-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5-mobile.webp    1x,
+                        ./images/project5-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project5-mobile.jpg    1x,
+                        ./images/project5-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project5.jpg"
+                      alt="Две коробки"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -212,13 +499,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project6.jpg"
-                    width="370"
-                    height="404"
-                    alt="Изображение веб-сайта на мониторе"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project6.webp            1x,
+                        ./images/project6-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6.jpg            1x,
+                        ./images/project6-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6-tablet.webp    1x,
+                        ./images/project6-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6-tablet.jpg    1x,
+                        ./images/project6-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6-mobile.webp    1x,
+                        ./images/project6-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project6-mobile.jpg    1x,
+                        ./images/project6-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project6.jpg"
+                      alt="Изображение веб-сайта на мониторе"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -236,13 +569,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project7.jpg"
-                    width="370"
-                    height="404"
-                    alt="Журнал"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project7.webp            1x,
+                        ./images/project7-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7.jpg            1x,
+                        ./images/project7-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7-tablet.webp    1x,
+                        ./images/project7-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7-tablet.jpg    1x,
+                        ./images/project7-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7-mobile.webp    1x,
+                        ./images/project7-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project7-mobile.jpg    1x,
+                        ./images/project7-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project7.jpg"
+                      alt="Журнал"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -260,13 +639,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project8.jpg"
-                    width="370"
-                    height="404"
-                    alt="Этикетка"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project8.webp            1x,
+                        ./images/project8-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8.jpg            1x,
+                        ./images/project8-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8-tablet.webp    1x,
+                        ./images/project8-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8-tablet.jpg    1x,
+                        ./images/project8-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8-mobile.webp    1x,
+                        ./images/project8-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project8-mobile.jpg    1x,
+                        ./images/project8-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project8.jpg"
+                      alt="Этикетка"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -284,13 +709,59 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-img link" href="">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./images/project9.jpg"
-                    width="370"
-                    height="404"
-                    alt="Пример приложения на ноутбуке"
-                    class="portfolio-list-item-img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/project9.webp            1x,
+                        ./images/project9-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9.jpg            1x,
+                        ./images/project9-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9-tablet.webp    1x,
+                        ./images/project9-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9-tablet.jpg    1x,
+                        ./images/project9-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9-mobile.webp    1x,
+                        ./images/project9-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/project9-mobile.jpg    1x,
+                        ./images/project9-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/project9.jpg"
+                      alt="Пример приложения в ноутбуке"
+                      class="portfolio-list-item-img"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -310,71 +781,76 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="footer-container container">
-        <div>
-          <a href="./index.html" lang="en" class="logo-footer link logo-accent"
-            >Web<span class="logo-white-color">Studio</span></a
-          >
+        <div class="footer-address-tablet">
+          <div>
+            <a
+              href="./index.html"
+              lang="en"
+              class="logo-footer link logo-accent"
+              >Web<span class="logo-white-color">Studio</span></a
+            >
 
-          <address class="footer-address">
-            <ul class="address-list list">
-              <li class="address-link">
-                <a href="https://goo-gl.me/G8uBm" class="address link"
-                  >г.Киев,пр-т Леси Украинки, 26</a
-                >
+            <address class="footer-address">
+              <ul class="address-list list">
+                <li class="address-link">
+                  <a href="https://goo-gl.me/G8uBm" class="address link"
+                    >г.Киев,пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="mail">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="footer-contact-mail-link link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="phone-number">
+                  <a href="tel:+380961111111" class="phone-number link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social">
+            <p class="footer-social-title">ПРИСОЕДИНЯЙТЕСЬ</p>
+
+            <ul class="social-icon-in-card list">
+              <li class="footer-social-icon-item">
+                <a class="footer-social-icon-link" href="">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="mail">
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="footer-contact-mail-link link"
-                  >info@devstudio.com</a
-                >
+              <li class="social-icon-item">
+                <a class="footer-social-icon-link" href="">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="phone-number">
-                <a href="tel:+380961111111" class="phone-number link"
-                  >+38 096 111 11 11</a
-                >
+              <li class="social-icon-item">
+                <a class="footer-social-icon-link" href="">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook-1-1"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-icon-item">
+                <a class="footer-social-icon-link" href="">
+                  <svg class="footer-social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="footer-social">
-          <p class="footer-social-title">ПРИСОЕДИНЯЙТЕСЬ</p>
-
-          <ul class="social-icon-in-card list">
-            <li class="footer-social-icon-item">
-              <a class="footer-social-icon-link" href="">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-instagram-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-icon-item">
-              <a class="footer-social-icon-link" href="">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-twitter-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-icon-item">
-              <a class="footer-social-icon-link" href="">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-facebook-1-1"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-icon-item">
-              <a class="footer-social-icon-link" href="">
-                <svg class="footer-social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-linkedin-1"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-form-container">
+        <div class="footer-form-mail-container">
           <form class="">
             <p class="footer-form-title">Подпишитесь на рассылку</p>
             <div class="footer-form-container">
@@ -397,5 +873,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
