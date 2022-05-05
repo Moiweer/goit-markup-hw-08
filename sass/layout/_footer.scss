@@ -146,7 +146,7 @@ a.logo.link {
 
 }
 
-.footer-social-icon {
+.footer-social-icon-link {
     color: var(--white-text-color);
 }
 
@@ -268,10 +268,13 @@ a.logo.link {
 
 .footer-social {
     margin-left: 70px;
+    margin-bottom: 0;
 }
+
 
 .address-list {
     display: block;
+    margin-bottom: 0;
 }
 
 
@@ -285,5 +288,6 @@ a.logo.link {
 }
 .footer-form-title {
     margin-left: 93px;
+    text-align: start;
 }
 }
