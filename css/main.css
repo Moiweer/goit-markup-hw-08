@@ -108,6 +108,8 @@ img {
 
 .header {
   position: relative;
+  border-bottom: 1px solid #eeeeee;
+  width: 100%;
 }
 
 .header-container {
@@ -118,7 +120,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #eeeeee;
 }
 
 .contacts-list {
@@ -186,6 +187,7 @@ img {
 }
 
 .mobile-menu.is-open {
+  z-index: 5;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -501,8 +503,6 @@ img {
     letter-spacing: 0.03em;
     color: var(--main-text-color);
     margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -747,6 +747,7 @@ img {
 }
 
 .team-list {
+  min-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1584,19 +1585,15 @@ a.logo.link {
   }
 }
 
-.menu-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .portfolio-list-item {
   display: block;
-  width: 370px;
+  width: 450px;
   margin-bottom: 30px;
 }
 
 .portfolio-link-img {
   display: block;
+  width: 100%;
   position: relative;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1652,14 +1649,34 @@ a.logo.link {
       flex-wrap: wrap;
 }
 
-.portfolio-list-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-  background-color: white;
-  padding: 0;
+@media screen and (min-width: 768px) {
+  .portfolio-list-item:not(:nth-child(2n)) {
+    margin-right: 30px;
+    background-color: white;
+    padding: 0;
+  }
+  .portfolio-list-item:last-child {
+    margin-bottom: 60px;
+  }
+  .portfolio-list-item {
+    width: 354px;
+  }
 }
 
-.portfolio-list-item:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
+@media screen and (min-width: 1200px) {
+  .portfolio-list-item {
+    min-width: 270px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+  .portfolio-list-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+    background-color: white;
+    padding: 0;
+  }
+  .portfolio-list-item:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
 }
 
 .portfolio-overlay {
