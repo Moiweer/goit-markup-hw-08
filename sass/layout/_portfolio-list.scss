@@ -1,10 +1,13 @@
 .portfolio-list-item {
     display: block;
+    width: 100%;
     width: 450px;
     margin-bottom: 30px;
 }
 .portfolio-link-img {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
     position: relative;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -31,6 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 4px;
+   
 }
 
 .portfolio-list-text {
@@ -39,6 +43,7 @@
     letter-spacing: 0.03em;
     color: var(--text-color);
     background-color: #ffffff;
+
 }
 
 .portfolio-list-container {
@@ -46,8 +51,12 @@
     border-bottom: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     padding: 20px 24px;
+    
 
 }
+ .portfolio-link-img > .portfolio-list-container{
+    flex-grow: 1;
+ }
 
 .portfolio-list {
     display: flex;
