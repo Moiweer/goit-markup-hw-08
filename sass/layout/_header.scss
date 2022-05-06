@@ -45,12 +45,16 @@
 
     .mobile-menu-container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
         padding-top: 48px;
         padding-bottom: 48px;
     }
 
     .mobile-menu {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         background-color: #ffff;
@@ -61,7 +65,7 @@
         visibility: hidden;
         pointer-events: none;
         transition: opacity 250ms linear, visibility 250ms liener;
-
+        z-index: 10;
     }
 
 
@@ -118,9 +122,9 @@
         }
     }
 
-    .mobile-menu-nav {
-        margin-bottom: 306px;
-    }
+    // .mobile-menu-nav {
+    //     margin-bottom: 306px;
+    // }
 
     .mobile-menu-contact {
         margin-bottom: 64px;
