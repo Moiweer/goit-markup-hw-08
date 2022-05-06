@@ -52,7 +52,7 @@ margin-bottom: 30px;
         .hero {
             background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)), url("/images/img5tablet@2x.jpg");
+                rgba(47, 48, 58, 0.4)), url("./images/img5tablet@2x.jpg");
         }
     }
 
@@ -67,7 +67,7 @@ margin-bottom: 30px;
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("/images/img5.jpg");
+        url("./images/img5.jpg");
     background-size: cover;
     background-color: #c4c4c4;
     }
@@ -79,7 +79,7 @@ margin-bottom: 30px;
  .hero {
         background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)), url("/images/Img5-desktop@2x.jpg");
+            rgba(47, 48, 58, 0.4)), url("./images/Img5-desktop@2x.jpg");
     }
 }
 
