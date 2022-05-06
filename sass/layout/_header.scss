@@ -64,7 +64,7 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transition: opacity 250ms linear, visibility 250ms liener;
+        transition: opacity 250ms linear visibility 250ms liener;
         z-index: 10;
     }
 
@@ -117,7 +117,7 @@
         transition: color 250ms linear;
 
         &:hover,
-        &.focus {
+        &:focus {
             color: var(--accent-hover-color);
         }
     }
@@ -218,11 +218,7 @@
             color: var(--main-text-color);
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-            &:hover {
-                color: var(--accent-text-color);
-            }
-
-            &:focus {
+            &:hover, &:focus {
                 color: var(--accent-text-color);
             }
 
@@ -275,7 +271,7 @@
         
 
         &:hover,
-        :focus {
+        &:focus {
             color: var(--accent-text-color);
         }
     }
@@ -290,7 +286,7 @@
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
             &:hover,
-            :focus {
+            &:focus {
                 color: var(--accent-text-color);
             }
         }
